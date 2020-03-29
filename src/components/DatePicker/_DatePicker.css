@@ -1,0 +1,143 @@
+@keyframes bounceHighlight {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.85);
+  }
+}
+
+.date-picker {
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 12px 0px;
+}
+
+.date-picker-heading {
+  display: flex;
+  flex: 1 1 0;
+  width: 100%;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.date-picker-heading span {
+  font-size: 13.5px;
+  color: #8484a4;
+}
+
+#prev {
+  padding-left: 8px;
+}
+
+#next {
+  padding-right: 8px;
+}
+
+#prev,
+#next {
+  cursor: pointer;
+}
+
+#prev::after,
+#next::after {
+  background-color: lightslategrey;
+  width: 30px;
+  height: 30px;
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  position: absolute;
+  border-radius: 50px;
+}
+
+#prev:hover::after,
+#next:hover::after {
+  animation: bounceHighlight 300ms ease forwards;
+}
+
+#prev path,
+#next path {
+  color: #8484a4;
+}
+
+.date-picker-date-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.date-picker-day-of-week,
+.date-picker-calendar-days {
+  font-size: 12.5px;
+  color: #8484a4;
+}
+
+.date-picker-day-of-week {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-picker-day-of-week p {
+  width: 30px;
+}
+
+.date-picker-calendar-days {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-picker-calendar-days div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-picker-calendar-days div p {
+  width: 30px;
+  height: 30px;
+}
+
+.date-picker-calendar-days div p.date {
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
+  transition: color 200ms ease, background-color 200ms ease;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.date-picker-calendar-days div p span {
+  z-index: 2;
+}
+
+.date-picker-calendar-days div p.date:hover {
+  color: white;
+}
+
+.date-picker-calendar-days div p.date::after {
+  background-color: #567df4;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  content: "";
+  border-radius: 50px;
+  transform: scale(0);
+}
+
+.date-picker-calendar-days div p.date:hover::after {
+  animation: bounceHighlight 300ms ease forwards;
+}

@@ -1,0 +1,125 @@
+.create-event {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.form-heading {
+  display: flex;
+  background-color: transparent;
+  margin-bottom: 30px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-container {
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.title-container h1 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  color: #1e1e37;
+}
+
+.title-container p {
+  font-size: 12px;
+  margin: 0;
+  color: #68688f;
+}
+
+form label {
+  font-size: 13px;
+  text-align: left;
+  width: 100%;
+  color: #1e1e37;
+}
+
+form input {
+  font-family: "Muli";
+  font-size: 12px;
+  border: 1px solid #ededf2;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 26px;
+  height: 40px;
+  width: 100%;
+  padding: 0px 8px;
+  box-sizing: border-box;
+  transition: 300ms ease border;
+}
+
+form input:focus {
+  border: 1px solid #2b2b65;
+}
+
+.calendar-input-container {
+  display: flex;
+  width: 100%;
+}
+
+.calendar-input-container label:first-child {
+  margin-right: 5px;
+}
+
+.calendar-input-container label:not(:first-child) {
+  margin-left: 5px;
+}
+
+.calendar-input-container input {
+  flex: 1 1 0;
+}
+
+form .button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form button {
+  border: 1px solid transparent;
+  padding: 10px 50px;
+  color: #1e1e37;
+  border-radius: 5px;
+  flex: 1 1 0;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 300ms ease background-color;
+}
+
+form button#cancel {
+  margin-right: 5px;
+}
+
+form button#cancel:hover {
+  background-color: #f8f8f8;
+  margin-right: 5px;
+}
+
+form button#create {
+  background-color: #567df4;
+  color: #fff;
+  margin-left: 5px;
+  transition: 300ms ease background-color;
+}
+
+form button#create:active {
+  background-color: #567df477;
+  color: #fff;
+  margin-left: 5px;
+}
